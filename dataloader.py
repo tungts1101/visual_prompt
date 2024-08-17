@@ -50,15 +50,15 @@ def get_dataset(config):
     ])
     
     if config.dataset.name == 'cifar10':
-        train_dataset = datasets.CIFAR10('/media/ellen/datasets', train=True, download=True, 
+        train_dataset = datasets.CIFAR10(config.dataset.root, train=True, download=True, 
                                          transform=train_transform)
-        val_dataset = datasets.CIFAR10('/media/ellen/datasets', train=False, download=True, 
+        val_dataset = datasets.CIFAR10(config.dataset.root, train=False, download=True, 
                                        transform=val_transform)
         num_classes = 10
     elif config.dataset.name == 'cifar100':
-        train_dataset = datasets.CIFAR100('/media/ellen/datasets', train=True, download=True, 
+        train_dataset = datasets.CIFAR100(config.dataset.root, train=True, download=True, 
                                           transform=train_transform)
-        val_dataset = datasets.CIFAR100('/media/ellen/datasets', train=False, download=True, 
+        val_dataset = datasets.CIFAR100(config.dataset.root, train=False, download=True, 
                                         transform=val_transform)
         num_classes = 100
     else:

@@ -1,5 +1,6 @@
 dataset: 
   name: 'cifar100'
+  root: '/media/ellen/datasets'
   percentage: 1
 train:
   batch_size: 64
