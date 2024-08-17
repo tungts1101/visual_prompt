@@ -1,0 +1,7 @@
+dataset: 
+  name: 'cifar100'
+  percentage: 1
+train:
+  batch_size: 64
+eval:
+  batch_size: 64
